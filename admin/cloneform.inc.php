@@ -1,17 +1,17 @@
 <?php
-$form = new XoopsThemeForm(_AM_SCLONE_CLONE_A_MODULE, "form", xoops_getenv('PHP_SELF'));
-$form->setExtra( "enctype='multipart/form-data'" ) ;
+$form = new XoopsThemeForm(_AM_SCLONE_CLONE_A_MODULE, 'form', xoops_getenv('PHP_SELF'), 'post', true);
+$form->setExtra("enctype='multipart/form-data'");
 
-$module_select = new XoopsFormSelect('', 'module', '', 1, false);
-$plugins_handler = new SmartclonePlugins();
-$module_select->addOptionArray($plugins_handler->getPluginsArray());
+$module_select  = new XoopsFormSelect('', 'module', '', 1, false);
+$pluginsHandler = new SmartclonePlugins();
+$module_select->addOptionArray($pluginsHandler->getPluginsArray());
 
 $plugins_tray = new XoopsFormElementTray(_AM_SCLONE_MODULE_SELECT, '');
 $plugins_tray->setDescription(_AM_SCLONE_MODULE_SELECT_DSC);
 $plugins_tray->addElement($module_select, true);
 
-include_once(SMARTOBJECT_ROOT_PATH . 'class/smarttip.php');
-$oTip = new SmartTip('smartclone_info1', _AM_SCLONE_WHERE_OTHER_MODULE, _AM_SCLONE_WHERE_OTHER_MODULE_EXP);
+require_once SMARTOBJECT_ROOT_PATH . 'class/smarttip.php';
+$oTip             = new SmartTip('smartclone_info1', _AM_SCLONE_WHERE_OTHER_MODULE, _AM_SCLONE_WHERE_OTHER_MODULE_EXP);
 $module_selec_tip = new XoopsFormLabel('', $oTip->render(false));
 $plugins_tray->addElement($module_selec_tip);
 
@@ -25,7 +25,7 @@ $install_check = new XoopsFormRadioYN(_AM_SCLONE_INSTALL_CHECK, 'install', true)
 $form->addElement($install_check);
 
 $form_button_tray = new XoopsFormElementTray('', '');
-$form_hidden = new XoopsFormHidden('op', '');
+$form_hidden      = new XoopsFormHidden('op', '');
 $form_button_tray->addElement($form_hidden);
 
 $form_butt_create = new XoopsFormButton('', '', _GO, 'submit');
