@@ -69,6 +69,15 @@ $modversion['hasSearch'] = 0;
 // Menu
 $modversion['hasMain'] = 0;
 
+// ------------------- Help files ------------------- //
+$modversion['helpsection'] = array(
+    ['name' => _MI_SCLONE_OVERVIEW, 'link' => 'page=help'],
+    ['name' => _MI_SCLONE_DISCLAIMER, 'link' => 'page=disclaimer'],
+    ['name' => _MI_SCLONE_LICENSE, 'link' => 'page=license'],
+    ['name' => _MI_SCLONE_SUPPORT, 'link' => 'page=support'],
+);
+
+
 // Templates
 $modversion['templates'][1]['file']        = 'smartclone_index.tpl';
 $modversion['templates'][1]['description'] = 'Help main page';

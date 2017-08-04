@@ -26,3 +26,11 @@ define('_AM_SCLONE_INSTALL_CHECK', 'Would you like to be directed to the install
 define('_AM_SCLONE_WHERE_OTHER_MODULE', 'Where are my other modules?');
 define('_AM_SCLONE_WHERE_OTHER_MODULE_EXP',
        'For a module to appear in this select box, it has to be present on your site AND it needs to have a related plugin file in the smartclone/plugins folder. If you would like to a clone a module for which no plugin has already been written, we encourage you to create it yourself ! Simply copy one of the plugin file already in that folder and rename the file with the name of this new module. We have documented the plugin structure directly in the file so please read all the commented code.');
+//1.10
+define('_AM_SCLONE_UPGRADEFAILED0', "Update failed - couldn't rename field '%s'");
+define('_AM_SCLONE_UPGRADEFAILED1', "Update failed - couldn't add new fields");
+define('_AM_SCLONE_UPGRADEFAILED2', "Update failed - couldn't rename table '%s'");
+define('_AM_SCLONE_ERROR_COLUMN', 'Could not create column in database : %s');
+define('_AM_SCLONE_ERROR_BAD_XOOPS', 'This module requires XOOPS %s+ (%s installed)');
+define('_AM_SCLONE_ERROR_BAD_PHP', 'This module requires PHP version %s+ (%s installed)');
+define('_AM_SCLONE_ERROR_TAG_REMOVAL', 'Could not remove tags from Tag Module');

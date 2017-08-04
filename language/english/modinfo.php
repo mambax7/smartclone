@@ -18,3 +18,16 @@ This module is BETA, meaning it is still under active development. This release 
 website or in a production environment.');
 
 define('_MI_SCLONE_ADMENU1', 'Clone a module');
+//1.10
+//Help
+define('_MI_SCLONE_DIRNAME', basename(dirname(dirname(__DIR__))));
+define('_MI_SCLONE_HELP_HEADER', __DIR__.'/help/helpheader.tpl');
+define('_MI_SCLONE_BACK_2_ADMIN', 'Back to Administration of ');
+define('_MI_SCLONE_OVERVIEW', 'Overview');
+
+//define('_MI_SCLONE_HELP_DIR', __DIR__);
+
+//help multi-page
+define('_MI_SCLONE_DISCLAIMER', 'Disclaimer');
+define('_MI_SCLONE_LICENSE', 'License');
+define('_MI_SCLONE_SUPPORT', 'Support');
