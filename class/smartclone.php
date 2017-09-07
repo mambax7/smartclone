@@ -19,7 +19,7 @@ class smartclone
 {
     public $_fromModule;
     public $_toModule;
-    public $_errors        = array();
+    public $_errors        = [];
     public $_sCloNe;
     public $_sCLONE;
     public $_sclone;
@@ -29,7 +29,7 @@ class smartclone
     public $_patterns;
     public $_patKeys;
     public $_patValues;
-    public $_logs          = array();
+    public $_logs          = [];
     public $_newModuleName = false;
     public $_newModuleURL  = false;
     public $_newPath;
@@ -80,11 +80,11 @@ class smartclone
         $this->addLog('Frommodule : ' . $this->_sModule);
 
         // first one must be module directory name
-        $this->_patterns = array(
+        $this->_patterns = [
             $this->_fromModule => $this->_sclone,
             $this->_sMODULE    => $this->_sCLONE,
             $this->_sModule    => $this->_sClone
-        );
+        ];
 
         // Look for a plugin for this fromModule
         $pluginsHandler = new SmartclonePlugins();

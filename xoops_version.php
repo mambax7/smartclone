@@ -7,7 +7,7 @@
  * Licence: GNU
  */
 
-// defined('XOOPS_ROOT_PATH') || exit('XOOPS root path not defined');
+// defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 
 $modversion['version']       = 1.10;
 $modversion['module_status'] = 'Beta 3';
@@ -34,7 +34,7 @@ $modversion['module_website_name'] = 'XOOPS';
 $modversion['min_php']             = '5.5';
 $modversion['min_xoops']           = '2.5.9';
 $modversion['min_admin']           = '1.2';
-$modversion['min_db']              = array('mysql' => '5.5');
+$modversion['min_db']              = ['mysql' => '5.5'];
 
 // Added by marcan for the About page in admin section
 $modversion['developer_lead']         = 'marcan [Marc-André Lanciault]';
@@ -70,12 +70,12 @@ $modversion['hasSearch'] = 0;
 $modversion['hasMain'] = 0;
 
 // ------------------- Help files ------------------- //
-$modversion['helpsection'] = array(
+$modversion['helpsection'] = [
     ['name' => _MI_SCLONE_OVERVIEW, 'link' => 'page=help'],
     ['name' => _MI_SCLONE_DISCLAIMER, 'link' => 'page=disclaimer'],
     ['name' => _MI_SCLONE_LICENSE, 'link' => 'page=license'],
     ['name' => _MI_SCLONE_SUPPORT, 'link' => 'page=support'],
-);
+];
 
 
 // Templates

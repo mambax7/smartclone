@@ -119,7 +119,7 @@ class SmartCloneUtility extends XoopsObject
             }
         }
 
-        if (!$success) {
+        if (false === $success) {
             $module->setErrors(sprintf(_AM_SCLONE_ERROR_BAD_XOOPS, $requiredVer, $currentVer));
         }
 

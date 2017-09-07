@@ -21,7 +21,7 @@ class SmartclonePlugins
     {
         require_once XOOPS_ROOT_PATH . '/class/xoopslists.php';
         $aFiles = XoopsLists::getFileListAsArray(SMARTCLONE_ROOT_PATH . 'plugins/');
-        $ret    = array();
+        $ret    = [];
         foreach ($aFiles as $file) {
             if (substr($file, strlen($file) - 4, 4) == '.php') {
                 $pluginName                = str_replace('.php', '', $file);

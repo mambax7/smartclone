@@ -27,7 +27,6 @@ switch ($op) {
             $smartClone = new SmartClone($module, $newname);
             if (!$smartClone->execute()) {
                 redirect_header(SMARTCLONE_ADMIN_URL, 3, $smartClone->getErrors());
-                exit;
             } else {
                 if (isset($_POST['install']) && $_POST['install']) {
                     $url = XOOPS_URL . '/modules/system/admin.php?fct=modulesadmin&op=install&module=' . $smartClone->_newModuleName;
@@ -35,11 +34,9 @@ switch ($op) {
                     $url = SMARTCLONE_ADMIN_URL;
                 }
                 redirect_header($url, 3, _AM_SCLONE_SUCCESS);
-                exit;
             }
         } else {
             redirect_header(SMARTCLONE_ADMIN_URL, 3, _AM_SCLONE_INVALID_SELECTION);
-            exit;
         }
         break;
 
