@@ -22,27 +22,27 @@ $moduleHelper->loadLanguage('modinfo');
 
 $adminmenu              = [];
 $i                      = 0;
-$adminmenu[$i]['title'] = _AM_MODULEADMIN_HOME;
-$adminmenu[$i]['link']  = 'admin/index.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/home.png';
+'title' =>  _AM_MODULEADMIN_HOME,
+'link' =>  'admin/index.php',
+'icon' =>  $pathIcon32 . '/home.png',
 ++$i;
-$adminmenu[$i]['title'] = _MI_SCLONE_ADMENU1;
-$adminmenu[$i]['link']  = 'admin/main.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/manage.png';
+'title' =>  _MI_SCLONE_ADMENU1,
+'link' =>  'admin/main.php',
+'icon' =>  $pathIcon32 . '/manage.png',
 
 ++$i;
-$adminmenu[$i]['title'] = _AM_MODULEADMIN_ABOUT;
-$adminmenu[$i]['link']  = 'admin/about.php';
-$adminmenu[$i]['icon']  = $pathIcon32 . '/about.png';
+'title' =>  _AM_MODULEADMIN_ABOUT,
+'link' =>  'admin/about.php',
+'icon' =>  $pathIcon32 . '/about.png',
 //++$i;
-//$adminmenu[$i]['title'] = _AM_MODULEADMIN_ABOUT;
-//$adminmenu[$i]['link'] =  "admin/about2.php";
+//'title' =>  _AM_MODULEADMIN_ABOUT,
+//'link' =>   "admin/about2.php",
 //$adminmenu[$i]["icon"]  = $pathIcon32 . '/about.png';
 
 //-----------------------------
 //++$i;
-//$adminmenu[$i]['title'] = _MI_SCLONE_CLONE_A_MODULE;
-//$adminmenu[$i]['link'] = "admin/index.php";
+//'title' =>  _MI_SCLONE_CLONE_A_MODULE,
+//'link' =>  "admin/index.php",
 //
 //if (isset($xoopsModule) && $xoopsModule->getVar('dirname') == 'smartclone') {
 //    ++$i;
