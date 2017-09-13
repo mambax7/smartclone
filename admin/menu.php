@@ -14,33 +14,39 @@ if (false !== ($moduleHelper = Xmf\Module\Helper::getHelper($moduleDirName))) {
     $moduleHelper = Xmf\Module\Helper::getHelper('system');
 }
 
-
 $pathIcon32 = \Xmf\Module\Admin::menuIconPath('');
 //$pathModIcon32 = $moduleHelper->getModule()->getInfo('modicons32');
 
 $moduleHelper->loadLanguage('modinfo');
 
-$adminmenu              = [];
-$i                      = 0;
-'title' =>  _AM_MODULEADMIN_HOME,
-'link' =>  'admin/index.php',
-'icon' =>  $pathIcon32 . '/home.png',
-++$i;
-'title' =>  _MI_SCLONE_ADMENU1,
-'link' =>  'admin/main.php',
-'icon' =>  $pathIcon32 . '/manage.png',
+$adminmenu = [];
 
-++$i;
-'title' =>  _AM_MODULEADMIN_ABOUT,
-'link' =>  'admin/about.php',
-'icon' =>  $pathIcon32 . '/about.png',
-//++$i;
+$adminmenu[] = [
+    'title' => _AM_MODULEADMIN_HOME,
+    'link'  => 'admin/index.php',
+    'icon'  => $pathIcon32 . '/home.png',
+];
+
+$adminmenu[] = [
+    'title' => _MI_SCLONE_ADMENU1,
+    'link'  => 'admin/main.php',
+    'icon'  => $pathIcon32 . '/manage.png',
+];
+
+$adminmenu[] = [
+    'title' => _AM_MODULEADMIN_ABOUT,
+    'link'  => 'admin/about.php',
+    'icon'  => $pathIcon32 . '/about.png',
+];
+
+//$adminmenu[] = [
 //'title' =>  _AM_MODULEADMIN_ABOUT,
 //'link' =>   "admin/about2.php",
 //$adminmenu[$i]["icon"]  = $pathIcon32 . '/about.png';
-
+//];
 //-----------------------------
-//++$i;
+
+//$adminmenu[] = [
 //'title' =>  _MI_SCLONE_CLONE_A_MODULE,
 //'link' =>  "admin/index.php",
 //
@@ -55,4 +61,5 @@ $i                      = 0;
 //    $headermenu[$i]['title'] = _AM_SOBJECT_ABOUT;
 //    $headermenu[$i]['link'] = SMARTCLONE_URL . "admin/about2.php";
 //}
+//];
 //
